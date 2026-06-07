@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="3.WriteReadText/3.WriteReadText.vcxproj" Id="90675207-6cea-4d40-90e2-62d9525897a7" />
+  <Project Path="AnimalOOP/AnimalOOP.vcxproj" />
 </Solution>
