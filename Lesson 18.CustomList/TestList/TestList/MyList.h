@@ -3,14 +3,14 @@
 #include<iostream>
 using namespace std;
 
-class MyList
+template <typename MyData> class MyList
 {
 private:
 	//В середині класу, буде ще 1 клас для зберігання інформації
 	class Node //Вузлик списку - зберігає дані 
 	{
 	public:
-		int data; //дані які зберігає
+		MyData data; //дані які зберігає
 		Node* next; // вказівник на наступний елемент у списку
 	};
 	Node* head; //Початок списку. Якщо список пустий, то head = NULL;
@@ -20,7 +20,7 @@ public:
 	{
 		head = NULL; //список порожній
 	}
-	void Add(int data) //Додаємо у список якусь інформацію
+	void Add(MyData data) //Додаємо у список якусь інформацію
 	{
 		if (head == NULL) //Список пустий, тоді елемент падає на початок
 		{
