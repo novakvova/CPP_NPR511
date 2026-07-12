@@ -20,6 +20,7 @@ public:
 	{
 		head = NULL; //список порожній
 	}
+	
 	void Add(MyData data) //Додаємо у список якусь інформацію
 	{
 		if (head == NULL) //Список пустий, тоді елемент падає на початок
@@ -88,4 +89,14 @@ public:
 		}
 	}
 
+	void WriteFile(string fileName)
+	{
+		ofstream outFile(fileName);
+		Node* temp = head; //створили вказівник на 1 елемент
+		while (temp != NULL) //Якщо не досягли кінця списку
+		{
+			outFile << temp->data << "\n"; //Виводи дані, які є у списку
+			temp = temp->next; //Рухаємося дані по списку
+		}
+	}
 };

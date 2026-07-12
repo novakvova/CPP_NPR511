@@ -71,6 +71,7 @@ void menu()
 		cout << "1.Додати нового\n";
 		cout << "2.Показати усіх козаків\n";
 		cout << "3.Сортувати список\n";
+		cout << "4.Записати у файл\n";
 		cout << "->_";
 		cin >> action;
 		cin.ignore(); // чистимо буфер вводу
@@ -100,6 +101,15 @@ void menu()
 			items.Sort(); // виконуємо сортування
 			cout << "----Список відсортовано :)-----\n";
 			break;
+		}
+		case 4: 
+		{
+			string fileName;
+			cout << "Вкажіть назву файлу: ";
+			getline(cin, fileName);
+			items.WriteFile(fileName);
+			cout << "-----Користувачі у файлі" << fileName << "------\n";
+
 		}
 		}
 

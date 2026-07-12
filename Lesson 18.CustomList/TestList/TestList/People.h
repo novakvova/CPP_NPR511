@@ -1,6 +1,7 @@
 #pragma once
 
 #include<iostream>
+#include<fstream>
 using namespace std;
 
 class People
@@ -33,6 +34,13 @@ public:
 	friend ostream& operator<<(ostream& os, const People& people)
 	{
 		os << people.name << "\t" << people.phone << "\t"
+			<< people.age;
+		return os;
+	}
+
+	friend ofstream& operator<<(ofstream& os, const People& people)
+	{
+		os << people.name << "\n" << people.phone << "\n"
 			<< people.age;
 		return os;
 	}
