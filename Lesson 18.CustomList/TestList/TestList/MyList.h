@@ -54,4 +54,38 @@ public:
 			temp = temp->next; //Рухаємося дані по списку
 		}
 	}
+
+	int Size()
+	{
+		int count = 0; //лічильник кількості лементів у списку
+		Node* temp = head; //створили вказівник на 1 елемент
+		while (temp != NULL) //Якщо не досягли кінця списку
+		{
+			count++;
+			temp = temp->next; //Рухаємося дані по списку
+		}
+		return count;
+	}
+
+	void Sort()
+	{
+		int n = this->Size(); //визначаємо поточну кількість
+		Node* temp = head; //Запам'ятовуємо початок
+		for (int i = 0; i < n - 1; i++) //іду до n-1
+		{
+			Node* next = temp->next; //Беремо наступний після i
+			for (int j = i + 1; j < n; j++) //на i позицію буде ставити найменший
+			{
+				if (temp->data>next->data)
+				{
+					MyData tempData = temp->data;
+					temp->data = next->data;
+					next->data = tempData; //переставляємо елементи місцями
+				}
+				next = next->next; //переходимо на наступний у списку
+			}
+			temp = temp->next; //Зміщаємо на наступний
+		}
+	}
+
 };

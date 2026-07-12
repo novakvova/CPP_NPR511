@@ -36,4 +36,11 @@ public:
 			<< people.age;
 		return os;
 	}
+	//people - це об'єкт - який буде з правого боку від >
+	bool operator>(const People& people)
+	{
+		if (this->name > people.name)
+			return true;
+		return false;
+	}
 };
