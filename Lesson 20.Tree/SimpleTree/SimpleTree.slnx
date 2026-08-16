@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="DobleList/DobleList.vcxproj" Id="01fed7da-2b98-4cb9-91e0-1eb95ee0d456" />
+  <Project Path="SimpleTree/SimpleTree.vcxproj" />
 </Solution>
