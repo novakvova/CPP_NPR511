@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="TreeWorking/TreeWorking.vcxproj" Id="3fe66d49-24aa-4b61-8204-fb3387d8fe68" />
+  <Project Path="Inheritance/Inheritance.vcxproj" />
 </Solution>
